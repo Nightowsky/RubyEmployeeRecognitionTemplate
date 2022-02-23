@@ -7,6 +7,7 @@ class KudosController < ApplicationController
   # GET /kudos
   def index
     @kudos = Kudo.all
+    
   end
 
   # GET /kudos/1
