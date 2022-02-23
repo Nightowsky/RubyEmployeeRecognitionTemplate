@@ -1,13 +1,10 @@
 class KudosController < ApplicationController
   before_action :set_kudo, only: %i[show edit update destroy]
-  before_action :kudo_giver_check, only: %i[edit update destroy] 
-
-  
+  before_action :kudo_giver_check, only: %i[edit update destroy]
 
   # GET /kudos
   def index
     @kudos = Kudo.all
-    
   end
 
   # GET /kudos/1
@@ -61,10 +58,6 @@ class KudosController < ApplicationController
   end
 
   def kudo_giver_check
-    if @kudo.giver == current_employee
-    else
-    redirect_to root_path, notice: "You are not authorized to edit this kudo."
-    end
+    return redirect_to root_path, notice: 'You are not authorized to edit this kudo.' if @kudo.giver != current_employee
   end
-
 end

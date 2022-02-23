@@ -19,6 +19,11 @@
   <strong>Giver:</strong>
   <%= @kudo.giver_id %>
 </p>
-<%= link_to 'Home', root_path %>  |
-<%= link_to 'Edit', edit_kudo_path(@kudo) %> |
+
 <%= link_to 'Back', kudos_path %>
+<% if @kudo.giver == current_employee %>
+| <%= link_to 'Edit', edit_kudo_path(@kudo) %>
+<% end %>
+
+
+

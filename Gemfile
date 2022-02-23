@@ -27,7 +27,7 @@ group :development, :test do
   gem 'rubocop'
   gem 'rubocop-rails'
   gem 'rubocop-rspec'
-  
+
   # Tests
   gem 'rspec-rails', '~> 5.0.0'
 end
