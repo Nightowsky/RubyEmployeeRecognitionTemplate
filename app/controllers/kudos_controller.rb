@@ -1,5 +1,6 @@
 class KudosController < ApplicationController
   before_action :set_kudo, only: %i[show edit update destroy]
+  before_action :kudo_giver_check, only: %i[edit update destroy]
 
   # GET /kudos
   def index
@@ -54,5 +55,9 @@ class KudosController < ApplicationController
   # Only allow a list of trusted parameters through.
   def kudo_params
     params.require(:kudo).permit(:title, :content, :receiver_id, :giver_id)
+  end
+
+  def kudo_giver_check
+    return redirect_to root_path, notice: 'You are not authorized to edit this kudo.' if @kudo.giver != current_employee
   end
 end
