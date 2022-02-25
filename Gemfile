@@ -21,12 +21,15 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'bootstrap', '~> 5.1.3'
 gem 'jquery-rails'
 
+
 group :development, :test do
   # Debugging tool
+  gem 'factory_bot_rails'
   gem 'pry-rails'
   gem 'rubocop'
   gem 'rubocop-rails'
   gem 'rubocop-rspec'
+  
 
   # Tests
   gem 'rspec-rails', '~> 5.0.0'

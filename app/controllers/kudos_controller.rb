@@ -58,6 +58,6 @@ class KudosController < ApplicationController
   end
 
   def kudo_giver_check
-    return redirect_to root_path, notice: 'You are not authorized to edit this kudo.' if @kudo.giver != current_employee
+    redirect_to root_path, notice: 'You are not authorized to edit this kudo.' if @kudo.giver != current_employee
   end
 end
