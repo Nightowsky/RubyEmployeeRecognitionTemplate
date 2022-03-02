@@ -23,13 +23,16 @@ gem 'jquery-rails'
 
 group :development, :test do
   # Debugging tool
+  gem 'factory_bot_rails'
   gem 'pry-rails'
+  gem 'rspec-rails', '~> 5.0.0'
   gem 'rubocop'
   gem 'rubocop-rails'
   gem 'rubocop-rspec'
+end
 
-  # Tests
-  gem 'rspec-rails', '~> 5.0.0'
+group :test do
+  gem 'capybara'
 end
 
 group :development do
