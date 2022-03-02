@@ -1,11 +1,6 @@
 # Employee Recognition Platfrom
 
-### Setup
-```
-bin/setup
-```
+### How to access live version
 
-### How to start the app
-```
-rails server
-```
+You can access live version on https://employeerecognition.herokuapp.com/
+to log in use following credentials: login: test.user@test.com, password: 123456
