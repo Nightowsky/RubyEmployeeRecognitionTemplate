@@ -6,4 +6,8 @@ Rails.application.routes.draw do
   devise_for :employees
   root to: 'kudos#index'
 
+  namespace :admin do
+    resources :dashboard
+  end
+
 end
