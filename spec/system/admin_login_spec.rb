@@ -5,7 +5,6 @@ RSpec.describe 'Admin and employee login' do
   let!(:admin_user) { create(:admin_user) }
 
   it 'Log in, log out' do
-
     visit root_path
 
     fill_in 'Email', with: employee.email
