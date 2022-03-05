@@ -2,4 +2,4 @@
     Employee.create(email: "employee#{i}@test.com", password: 'password')
 end
 
-AdminUser.create(email: "admin@test.com", password: 'admin123')rubo
+AdminUser.where(email: 'admin@test.com').first_or_create!(password: 'admin123')
